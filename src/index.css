@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-paper: oklch(96% 0.012 80);
+  --color-paper-soft: oklch(92% 0.014 80);
+  --color-paper-3: oklch(88% 0.016 80);
+  --color-ink: oklch(22% 0.02 240);
+  --color-ink-soft: oklch(40% 0.02 240);
+  --color-line: oklch(86% 0.012 80);
+
+  --color-brand: oklch(28% 0.08 245);
+  --color-brand-2: oklch(40% 0.09 240);
+  --color-brand-ink: oklch(98% 0.005 220);
+
+  --color-accent: oklch(72% 0.13 70);
+  --color-accent-soft: oklch(86% 0.08 80);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
