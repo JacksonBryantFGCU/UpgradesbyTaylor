@@ -32,9 +32,9 @@ export function ServicesPreview() {
             </h2>
           </div>
           <p className="text-[16px] leading-[1.6] text-ink-soft">
-            I focus on the finish-level work that changes how a room feels day to day —
-            kitchens, baths, built-ins, paint and trim, flooring, tile, and the smaller
-            upgrades that have been on your list too long. If it's not on the list, ask anyway.
+            Entertainment centers, ceilings, accent walls, trimwork, storage and closets,
+            home offices — the finish-level work that changes how a room feels day to day.
+            If it's not on the list, ask anyway.
           </p>
         </div>
 
@@ -50,9 +50,6 @@ export function ServicesPreview() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
-          <Button as="a" href="/services" variant="ghost" size="lg">
-            View all services <span aria-hidden>→</span>
-          </Button>
           <Button as="a" href="/contact" variant="ghost" size="lg">
             Tell me about your project <span aria-hidden>→</span>
           </Button>
