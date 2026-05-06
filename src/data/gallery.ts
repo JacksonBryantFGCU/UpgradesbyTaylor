@@ -114,7 +114,6 @@ const groups: Record<GalleryCategory, Entry[]> = {
   Offices: [
     { src: "/images/detail-1.jpg", label: "Home Office Built-ins", size: "wide" },
     { src: "/images/detail-2.jpg", label: "Office Wall Detail", size: "wide" },
-    { src: "/images/office-02.jpg", label: "Shiplap Studio", size: "wide" },
     { src: "/images/office-03.jpg", label: "Built-in Cabinets", size: "wide" },
     { src: "/images/office-04.jpg", label: "Office Desk Wall", size: "wide" },
     { src: "/images/office-05.jpg", label: "Vanity Office", size: "wide" },
