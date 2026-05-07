@@ -30,7 +30,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-[480px] text-base leading-[1.6] text-ink-soft md:mt-7 md:text-[18px]">
-              Kitchens, baths, built-ins, and the dozen smaller upgrades that make a house
+              Entertainment Centers, Accent Walls, Beams, and the dozen smaller upgrades that make a house
               feel finished. Built by Taylor — start to finish, no subcontracted shortcuts.
             </p>
 
