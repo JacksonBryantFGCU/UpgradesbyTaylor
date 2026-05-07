@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Back roofline -->
+  <path d="M4 32 L32 8 L60 32" stroke="#2B3555" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Front roofline -->
+  <path d="M10 44 L32 24 L54 44" stroke="#2B3555" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Chimney -->
+  <rect x="44" y="14" width="4" height="9" stroke="#2B3555" stroke-width="2.5" stroke-linejoin="round" fill="none" />
+  <!-- Foundation tick -->
+  <path d="M14 50 L50 50" stroke="#B88828" stroke-width="2" stroke-linecap="round" />
+</svg>

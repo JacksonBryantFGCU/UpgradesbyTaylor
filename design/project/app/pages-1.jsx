@@ -54,7 +54,7 @@ function HomePage({ setRoute, tweaks }) {
               {headlineParts[2]}
             </h1>
             <p className="hero__lede">
-              Kitchens, built-ins, and the dozen smaller upgrades that make a house feel finished. Built by Taylor — start to finish, no subcontracted shortcuts.
+              Entertainment Centers, Accent Walls, Beams, and the dozen smaller upgrades that make a house feel finished. Built by Taylor — start to finish, no subcontracted shortcuts.
             </p>
             <p className="hero__credentials">
               Licensed &amp; insured · based in Wellen Park, Venice FL
