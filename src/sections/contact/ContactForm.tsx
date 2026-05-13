@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/Button";
 import { ContactSuccess } from "@/sections/contact/ContactSuccess";
 
 const PROJECT_TYPES = [
-  "Kitchen remodel",
-  "Bathroom remodel",
-  "Custom cabinetry / built-ins",
-  "Painting & trim",
-  "Flooring",
-  "Tile work",
-  "Handyman / smaller upgrades",
-  "Multiple / not sure",
+  "Entertainment Centers",
+  "Ceilings",
+  "Accent Walls",
+  "Trimwork",
+  "Storage / Closets",
+  "Offices",
+  "Other / Not sure",
 ];
 
 const TIMELINES = [
@@ -44,20 +43,37 @@ const initial: FormState = {
 export function ContactForm() {
   const [form, setForm] = useState<FormState>(initial);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const update =
     (k: keyof FormState) =>
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
       setForm((f) => ({ ...f, [k]: e.target.value }));
 
-  const submit = (e: FormEvent<HTMLFormElement>) => {
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Server error");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const reset = () => {
     setSubmitted(false);
+    setError(null);
     setForm(initial);
   };
 
@@ -125,9 +141,15 @@ export function ContactForm() {
         />
       </Field>
 
+      {error && (
+        <p className="text-sm text-red-600" role="alert">
+          {error}
+        </p>
+      )}
+
       <div className="flex flex-wrap items-center gap-4">
-        <Button type="submit" variant="primary" size="lg">
-          Send message <span aria-hidden>→</span>
+        <Button type="submit" variant="primary" size="lg" disabled={loading}>
+          {loading ? "Sending…" : <>Send message <span aria-hidden>→</span></>}
         </Button>
         <span className="text-[12px] text-ink-soft/70">
           I'll respond within a business day.
